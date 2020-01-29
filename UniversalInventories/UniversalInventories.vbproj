@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A045906-5D60-4DC2-9637-72B980CE2DA9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>UniversalInventories.My.MyApplication</StartupObject>
+    <RootNamespace>UniversalInventories</RootNamespace>
+    <AssemblyName>UniversalInventories</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>UniversalInventories.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>UniversalInventories.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DSSystem.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSSystem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSSystem.vb">
+      <DependentUpon>DSSystem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\AboutPanel.Designer.vb">
+      <DependentUpon>AboutPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\AboutPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panels\customerPanel.Designer.vb">
+      <DependentUpon>customerPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\customerPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\employeesPanel.Designer.vb">
+      <DependentUpon>employeesPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\employeesPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\graphPanel.Designer.vb">
+      <DependentUpon>graphPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\graphPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\insertCustomerPanel.Designer.vb">
+      <DependentUpon>insertCustomerPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\insertCustomerPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\insertEmployeePanel.Designer.vb">
+      <DependentUpon>insertEmployeePanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\insertEmployeePanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\insertProductPanel.Designer.vb">
+      <DependentUpon>insertProductPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\insertProductPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\insertSupplier.Designer.vb">
+      <DependentUpon>insertSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\insertSupplier.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\lowStockPanel.Designer.vb">
+      <DependentUpon>lowStockPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\lowStockPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\productsPanel.Designer.vb">
+      <DependentUpon>productsPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\productsPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\ReceiptPanel.Designer.vb">
+      <DependentUpon>ReceiptPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\ReceiptPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\reportsPanel.Designer.vb">
+      <DependentUpon>reportsPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\reportsPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\saleView.Designer.vb">
+      <DependentUpon>saleView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\saleView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\salePanel.Designer.vb">
+      <DependentUpon>salePanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\salePanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\LoginPanel.Designer.vb">
+      <DependentUpon>LoginPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\LoginPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Panels\supplierPanel.Designer.vb">
+      <DependentUpon>supplierPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\supplierPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\supplierReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>supplierReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Panels\supplierReportForm.Designer.vb">
+      <DependentUpon>supplierReportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\supplierReportForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panels\taskManagementPanel.Designer.vb">
+      <DependentUpon>taskManagementPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\taskManagementPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\viewOrdersPanel.Designer.vb">
+      <DependentUpon>viewOrdersPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\viewOrdersPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\viewReportsStatistics.Designer.vb">
+      <DependentUpon>viewReportsStatistics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\viewReportsStatistics.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Panels\AboutPanel.resx">
+      <DependentUpon>AboutPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\customerPanel.resx">
+      <DependentUpon>customerPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\employeesPanel.resx">
+      <DependentUpon>employeesPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\graphPanel.resx">
+      <DependentUpon>graphPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\insertCustomerPanel.resx">
+      <DependentUpon>insertCustomerPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\insertEmployeePanel.resx">
+      <DependentUpon>insertEmployeePanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\insertProductPanel.resx">
+      <DependentUpon>insertProductPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\insertSupplier.resx">
+      <DependentUpon>insertSupplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\LoginPanel.resx">
+      <DependentUpon>LoginPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\lowStockPanel.resx">
+      <DependentUpon>lowStockPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\productsPanel.resx">
+      <DependentUpon>productsPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\ReceiptPanel.resx">
+      <DependentUpon>ReceiptPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\reportsPanel.resx">
+      <DependentUpon>reportsPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\saleView.resx">
+      <DependentUpon>saleView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\salePanel.resx">
+      <DependentUpon>salePanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\supplierPanel.resx">
+      <DependentUpon>supplierPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\supplierReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>supplierReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\supplierReportForm.resx">
+      <DependentUpon>supplierReportForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\taskManagementPanel.resx">
+      <DependentUpon>taskManagementPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\viewOrdersPanel.resx">
+      <DependentUpon>viewOrdersPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\viewReportsStatistics.resx">
+      <DependentUpon>viewReportsStatistics.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DSSystem.xsc">
+      <DependentUpon>DSSystem.xsd</DependentUpon>
+    </None>
+    <None Include="DSSystem.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DSSystem.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DSSystem.xss">
+      <DependentUpon>DSSystem.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+    <Content Include="vat.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\resized ui.png" />
+    <None Include="Resources\resized ui image.png" />
+    <None Include="Resources\UI logo resize.png" />
+    <None Include="Resources\Universal Inventories Logo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
